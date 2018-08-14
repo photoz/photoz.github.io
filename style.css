@@ -1,0 +1,465 @@
+/******* Media Queries are at the end of every section ******/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.clearfix::after, section::after, 
+footer::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*** Col System ****/
+
+[class^=col-]{
+  float: left;
+  padding: 0 0.5em;
+}
+
+[class^=col-]:first-child {
+padding-left: 0;
+}
+
+[class^=col-]:last-child {
+padding-right: 0;
+}
+
+.col-3 {
+  width: 100%;
+  float: none;
+}
+
+.col-1 {
+  width: 33.3334%;
+}
+/***************** Buttons ***************/
+
+.button {
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid ;
+  color: #fff;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 2px;
+}
+
+
+.button-accent {
+  color: #00ff6c;
+  border-color: #00ff6c;
+}
+
+.button-middle {
+	padding: 15px 35px;
+	font-size: 1rem;
+}
+
+
+.button-small {
+	font-size: 0.8rem;
+	padding: 8px 20px;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+.button-dark {
+  color: #232323;
+  border-color: #232323;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+  color: #232323;
+  background-color: #00ff6c;
+  transition: 0.5s ease-in-out;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+  color: #00ff6c;
+  background-color: #232323;
+  transition: 0.5s ease-in-out;
+}
+
+          /************    Header    ***************/
+
+
+.logo {
+  color: #00ff6c;
+  font-size: 60px;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 1em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0.7em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #00ff6c;
+  transition: 0.3s all ease-in-out;
+}
+
+
+@media(min-width:1000px){
+  
+  nav {
+    float: right;
+    margin-top: 25px;
+    padding-right: 50px;
+  }
+  header h1 {
+    float: left; 
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 50px;
+  }
+	nav a {
+		font-size: 15px;
+	}
+}
+
+        /*************** Home Main *************/
+
+
+.home-main {
+  background-image: url(img/mainhome.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding-top:35vh;
+}
+
+
+@media(min-width:1000px){
+  .home-main {
+    height: 100vh;
+  }
+}
+
+.main-h1 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.main-h1 span {
+  font-weight: 300;
+  display: block;
+  font-size: 0.7em;
+  padding-bottom: 60px;
+}
+.container a {
+  margin-bottom: 30px;
+}
+
+@media(min-width:1000px) {
+  .main-h1 {
+    font-size: 2.7rem
+  }
+}
+
+@media(max-height:500px){
+	.main-h1 span {
+		padding-bottom: 0;
+	}
+	.container {
+		padding-top: 8px;
+	}
+}
+
+
+/*****************  Home-About Section   ***********/
+
+.home-about {
+  background: #232323;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.home-about-text {
+  padding: 30px;
+  margin: 50px;
+  outline: 3px solid #00ff6c; 
+  outline-offset: -15px;
+  color: #fff;
+  position: relative;
+  
+}
+.home-about-text h1 {
+  color: #00ff6c;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px ;
+  right: 0;
+  left: 0;
+  background-color:#232323;
+  margin-right: 18vw;
+  margin-left: 18vw;
+}
+
+.home-about a {
+  margin-bottom: 30px;
+}
+
+.home-about-text p {
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	word-spacing: 2px;
+}
+
+@media(min-width:950px){
+  .home-about-text p {
+	font-size: 20px;
+		margin: 40px;
+	}
+  .home-about-text {
+    overflow:hidden;
+  }
+  .home-about-text h1 {
+    margin-right: 35vw;
+    margin-left: 35vw;
+  }
+}
+@media(max-width:445px){
+  .home-about-text h1{
+    margin-right: 8vw;
+    margin-left: 8vw;
+    font-size: 20px;
+}
+}
+
+
+/******* Gallery Sectio *********/
+
+.main-gallery {
+	margin: 3em 0 0;
+}
+
+.main-gallery h1 {
+	text-transform: uppercase;
+}
+
+.gallery-item {
+	margin: 0;
+	position: relative;
+}
+
+.project-des {
+	position: absolute;
+	z-index: 100;
+	bottom: 1em;
+	left: 1em;
+	right: 1em;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+figure p {
+	margin: 1em;
+}
+
+.gallery-item img {
+	display: block;
+}
+
+@media(min-width:768px){
+	.gallery-item {
+		width: 50%;
+		float: left;
+	}
+	.main-gallery h1 {
+	font-size: 35px;
+	}
+}
+
+@media(min-width:1300px){
+	.main-gallery h1 {
+	font-size: 50px;
+	}
+
+	.gallery-item {
+		width: 33.333333334%;
+		float: left;
+		overflow: hidden;
+	}
+	.project-des {
+		transform: translateY(150%);
+	}
+	.gallery-item:hover .project-des {
+		transform: translateY(0%);
+		transition: 0.6s ease-in-out;
+	}
+}
+
+
+/**** C-T-A Section ****/
+
+.cta {
+  background-color: #00ff6c;
+  padding: 5em 0;
+}
+
+.cta h1 {
+  color: #232323;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+}
+
+.social-icons a {
+  font-size: 30px;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+@media(min-width:768px){
+  .social-section {
+    margin: 50px;
+  }
+  .social-icons a {
+    font-size: 50px;
+  }
+  .social-section h1 {
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+}
+
+/**** Footer Section *****/
+
+footer {
+  background: #232323;
+  color: #fff;
+  margin: 0;
+  text-align: left;
+  padding: 4em 0;
+}
+
+.footer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.footer-list li {
+  padding-top: 3px;
+  text-align: center;
+}
+
+.footer-list a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #00ffc6;
+}
+
+.footer-list a:hover{
+  color: blueviolet;
+  transition: 0.5s all ease-in-out;
+}
+
+.footer-div {
+  text-align: center;
+}
+
+@media(max-width:400px){
+  .footer-list {
+    font-size: 12px;
+  }
+  .footer-list a {
+    font-size: 15px;
+  }
+  .footer-div {
+    font-size: 15px;
+}
+}
+
+/**** Credits Section *****/
+
+.footer-credits {
+  background-color: #000000;
+  margin:0;
+  padding: 10px 0;
+}
+
+.credits-p {
+  color: #fff;
+}
+
+.credits-link {
+  text-decoration: none;
+  color: #00ff6c;
+}
+
+.credits-link:hover {
+  color: blueviolet;
+  transition: 0.5s all ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
